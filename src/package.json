@@ -9,7 +9,11 @@
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
+    "@captaincss/captaincss": "^2.5.0",
+    "@nuxtjs/tailwindcss": "^6.6.6",
     "@types/node": "^18",
-    "nuxt": "^3.4.2"
+    "nuxt": "^3.4.2",
+    "postcss-import": "^15.1.0",
+    "vue-tsc": "^1.4.4"
   }
 }
