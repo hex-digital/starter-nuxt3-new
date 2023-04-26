@@ -1,15 +1,27 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "packageManager": "yarn@1.22.9",
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not edge <= 18",
+    "not ie 11",
+    "not op_mini all",
+    "not dead"
+  ],
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "install:all": "for D in */; do yarn --cwd \"${D}\"; done",
+    "lint": "eslint --cache src",
+    "lint:fix": "eslint --cache --fix src",
+    "typecheck": "yarn --cwd src nuxi typecheck --noEmit",
+    "prepare": "husky install"
   },
-  "devDependencies": {
-    "@types/node": "^18",
-    "nuxt": "^3.4.2"
+  "dependencies": {
+    "@commitlint/cli": "^17.6.1",
+	  "@hexdigital/config-commitlint": "^1.0.1",
+	  "@hexdigital/eslint-config": "^1.3.3",
+	  "eslint": "^8.39.0",
+	  "husky": "^8.0.3",
+	  "lint-staged": "^13.2.2"
   }
 }

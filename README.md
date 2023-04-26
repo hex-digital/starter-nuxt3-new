@@ -1,42 +1,55 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Base - Hex Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A starter for a base Nuxt3 site, without UI bells and whistles.
 
-## Setup
+Most other starters are derived from this one
 
-Make sure to install the dependencies:
+- A solid application architecture, ready to section application code by modules.
+- Barebones base components, with little-to-no UI theming. Customise as you like, knowing the basics are covered.
+- Set up for [TypeScript](https://www.typescriptlang.org/).
+- Pre-integrated with [Pinia](https://pinia.vuejs.org/).
+- Pre-integrated with [Tailwind](https://tailwindcss.com/) and PostCSS plugins configured.
+- [Documentation](./docs) to detail how it all works, and why.
 
-```bash
-# yarn
-yarn install
+## Prerequisites / Setup
 
-# npm
-npm install
+For installation and setup instructions, please read the [Getting Started] documentation.
 
-# pnpm
-pnpm install
-```
+## Documentation
 
-## Development Server
+Please see the [`~/docs` directory](./docs/START-HERE.md) for documentation.
 
-Start the development server on `http://localhost:3000`
+## Contributing
 
-```bash
-npm run dev
-```
+All contributions are welcome. Please see our [Contribution Guidelines](./CONTRIBUTING.md).
 
-## Production
+### Lint and Test staged files pre-commit
 
-Build the application for production:
+When attempting to commit, the staged files will be linted, and any relevant tests will be run.
 
-```bash
-npm run build
-```
+If the linting fails or the tests do not pass, you will be unable to commit.
 
-Locally preview production build:
+In rare circumstances, this may block you from committing when we do not wish it to. In those cases, delete the offending line from
+the `lint-staged` key, in `package.json`. Note that this should be a temporary measure, and quickly remedied. Do not commit
+ the `package.json` changes.
 
-```bash
-npm run preview
-```
+### Conventional Commits
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Our commit messages use conventional commits. If your commit message does not match the defined standard, you'll receive an error
+message and the commit will not be added.
+
+To learn how to write conventional commits, please [read the conventional commits guide](https://www.conventionalcommits.org/).
+
+## Attribution
+
+Thank you to numerous open source projects from which we've pulled ideas, inspiration and implementation for
+features and code.
+
+- [Vitesse Nuxt3](https://github.com/antfu/vitesse-nuxt3) for the initial Nuxt3 and Vite boilerplate. Thanks Anthony!
+- [Vue Storefront](https://github.com/vuestorefront/vue-storefront) for some excellent Nuxt composables, app structure and blog tutorials where we learnt alot.
+
+And so much gratitude to the whole open source community for the many years of open source software
+we've built upon. Standing on the shoulders of absolute giants. 💪
+
+
+[Getting Started]: ./docs/0.%20Getting%20Started/0.%20Quick%20Start.md

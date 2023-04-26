@@ -1,0 +1,8 @@
+{
+  "extends": "@hexdigital",
+  "ignorePatterns": [
+    "**/*.g.ts",
+    "src/api/enums/beetl-enums.ts",
+    "src/api/graphql.schema.json"
+  ]
+}
