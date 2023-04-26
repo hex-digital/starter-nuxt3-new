@@ -10,7 +10,7 @@ import { logger } from '~/helpers/logger';
 logger.debug('test');
 
 useHead({
-  title: 'Fiddlefig Studio | Refuse to Blend In',
+  title: 'Hex | Product and Growth Studio',
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
   htmlAttrs: { lang: 'en' },
 });
