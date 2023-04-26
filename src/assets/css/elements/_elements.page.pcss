@@ -1,0 +1,80 @@
+/**
+ * Simple page-level setup.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project. The `font-size` is in ems, the `line-height`
+ *    is unitless.
+ * 2. Nicer looking fonts via font smooth. See: https://szafranek.net/blog/2009/02/22/font-smoothing-explained/
+ * 3. Webkit browsers overlay their UI bottom pane onto/over the website. This is a hacky fix for that.
+ * 4. Allow absolute or fixed positioning to position properly even when WP admin-bar is visible at top of screen.
+ * 5. Add a top offset to anchor links, so they don't headbutt the top of the browser window.
+ * 6. Using optimizelegibility instead of optimizespeed makes your text look nicer, but can have serious performance issues such as 30 second loading delays. It can be added to sections of microcopy though.
+ */
+
+html {
+  background-color: var(--base-bg-color);
+  color: var(--base-text-color);
+  font-family: var(--base-font-family);
+  font-size: 1em; /* [1] */
+  //-moz-osx-font-smoothing: grayscale; /* [2] */
+  //-webkit-font-smoothing: antialiased; /* [2] */
+  height: stretch; /* [3] */
+  line-height: var(--base-line-height, 1.25); /* [1] */
+  position: relative; /* [4] */
+  scroll-padding-top: var(--base-scroll-padding, 70px); /* [5] */
+  text-rendering: optimizespeed; /* [6] */
+
+  @screen tablet {
+    scroll-padding-top: 100px; /* [5] */
+  }
+  @screen desk {
+    scroll-padding-top: 140px; /* [5] */
+  }
+}
+
+body {
+  background-color: var(--base-bg-color);
+  font-size: var(--base-font-size);
+  min-height: 100vh; /* [3] */
+  min-height: stretch; /* [3] */
+}
+
+sub {
+  position: static;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+b,
+strong {
+  font-weight: var(--base-bold-weight, 700);
+}
+
+address {
+  font-style: unset;
+}
+
+
+/**
+ * Apply class to <body> tag to create a grid with the footer at the bottom. This causes the footer to always 'stick' to
+ * the bottom of the screen, even on pages with little content. See: https://css-tricks.com/couple-takes-sticky-footer/
+ */
+.u-sticky-footer {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

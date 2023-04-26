@@ -1,0 +1,7 @@
+/*@import "tailwindcss/base";*/
+@import "generics/_generics.global-variables.pcss";
+@import "elements/_elements.page.pcss";
+
+/*@import "tailwindcss/components";*/
+
+/*@import "tailwindcss/utilities";*/
