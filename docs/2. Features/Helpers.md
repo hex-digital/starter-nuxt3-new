@@ -1,4 +1,4 @@
-# Helpers
+# Guide > Features > Helpers
 
 This repo has a number of helpers, which we aim to explain at a top level here.
 
